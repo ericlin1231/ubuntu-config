@@ -17,6 +17,7 @@
     cargo
 
     yosys
+    openfpgaloader
     verilator
 
     pyenv
@@ -58,6 +59,7 @@
       shiftwidth = 4;
     };
     extraConfig = ''
+      set belloff=all
       nnoremap <Space>u <C-r>
     '';
   };
