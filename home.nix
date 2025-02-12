@@ -22,6 +22,17 @@
     pyenv
   ];
 
+  programs.bash = {
+    enable = true;
+    shellAliases = {
+      v="vim";
+      l="ls -la";
+    };
+    initExtra = ''
+      eval "$(starship init bash)"
+    '';
+  };  
+
   programs.starship = {
     enable = true;
   };
