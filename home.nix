@@ -13,6 +13,7 @@
     cmake
     curl
     wget
+    texliveFull
 
     cargo
 
@@ -35,6 +36,25 @@
 
   programs.starship = {
     enable = true;
+  };
+
+  programs.vim = {
+    enable = true;
+    defaultEditor = true;
+    plugins = with pkgs.vimPlugins; [
+      vimtex
+      vim-commentary
+    ];
+    settings = {
+      expandtab = true;
+      smartcase = true;
+      ignorecase = true;
+      tabstop = 4;
+      shiftwidth = 4;
+    };
+    extraConfig = ''
+      nnoremap <Space>u <C-r>
+    '';
   };
 
   programs.home-manager.enable = true;

@@ -19,9 +19,6 @@ unzip Noto.zip "*.ttf" -d ~/.local/share/fonts
 fc-cache fv
 rm Noto.zip
 
-# Install Vim Plugins
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
 # Install RISC-V Toolchain
 sudo mkdir -p /opt/riscv
 git clone https://github.com/riscv-collab/riscv-gnu-toolchain.git
