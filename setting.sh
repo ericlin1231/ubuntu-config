@@ -7,11 +7,6 @@ sudo -v
 # Keep sudo Permission Valid
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# Git Setting
-git config --global user.email "eric1231.tw@gmail.com"
-git config --global user.name "ericlin1231"
-git config --global init.defaultBranch main
-
 # Install Fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Noto.zip
 mkdir -p ~/.local/share/fonts

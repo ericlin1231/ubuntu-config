@@ -6,7 +6,6 @@
   home.stateVersion = "24.11";
 
   home.packages = with pkgs; [
-    git
     bat
     htop
     gnumake
@@ -22,6 +21,12 @@
 
     pyenv
   ];
+
+  programs.git = {
+    enable = true;
+    userName = "ericlin1231";
+    userEmail = "eric1231.tw@gmail.com";
+  };
 
   programs.bash = {
     enable = true;
