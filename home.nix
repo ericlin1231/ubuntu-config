@@ -14,7 +14,14 @@
     wget
     texliveFull
 
+    (python3.withPackages (python-pkgs: [
+      python-pkgs.pip
+      python-pkgs.pandas
+      python-pkgs.numpy
+      python-pkgs.requests
+    ]))
     cargo
+    virtualenv
     sbt
     scalafmt
     sdl3
@@ -22,6 +29,7 @@
     yosys
     circt
     nextpnr
+    openocd
     openfpgaloader
     verilator
 
