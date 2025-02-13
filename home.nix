@@ -12,12 +12,17 @@
     cmake
     curl
     wget
+    docker
     texliveFull
 
     cargo
-
     sbt
+    scalafmt
+    sdl3
+
     yosys
+    circt
+    nextpnr
     openfpgaloader
     verilator
 
