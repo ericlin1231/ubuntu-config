@@ -12,7 +12,6 @@
     cmake
     curl
     wget
-    docker
     texliveFull
 
     cargo
@@ -42,6 +41,8 @@
       l="ls -la";
     };
     initExtra = ''
+      export PATH=$PATH:/opt/riscv/bin
+
       eval "$(starship init bash)"
       cd ~/workspace
     '';
