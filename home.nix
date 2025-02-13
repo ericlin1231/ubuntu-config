@@ -71,5 +71,10 @@
     '';
   };
 
+  programs.java = {
+    enable = true;
+    package = pkgs.jdk21;
+  };
+
   programs.home-manager.enable = true;
 }
