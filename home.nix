@@ -16,6 +16,7 @@
 
     cargo
 
+    sbt
     yosys
     openfpgaloader
     verilator
@@ -37,6 +38,7 @@
     };
     initExtra = ''
       eval "$(starship init bash)"
+      cd ~/workspace
     '';
   };  
 
