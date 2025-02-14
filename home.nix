@@ -14,16 +14,17 @@
     wget
     texliveFull
 
-    (python3.withPackages (python-pkgs: [
-      python-pkgs.pip
-      python-pkgs.pandas
-      python-pkgs.numpy
-      python-pkgs.requests
+    (python3.withPackages (pk: with pk; [
+      pip
+      pandas
+      numpy
     ]))
-    cargo
     virtualenv
+    cargo
+    gcc
     sbt
     scalafmt
+    glfw
     sdl3
 
     yosys
@@ -50,6 +51,7 @@
     };
     initExtra = ''
       export PATH=$PATH:/opt/riscv/bin
+      export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/usr/include/
 
       eval "$(starship init bash)"
       cd ~/workspace
