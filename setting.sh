@@ -10,15 +10,12 @@ mkdir -p ~/workspace/share
 # Keep sudo Permission Valid
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-# Install Nix
-sh <(curl -L https://nixos.org/nix/install)
-
-# Install GLAD for OpenGL v4.0
-wget https://glad.dav1d.de/generated/tmp1qnd2jmrglad/glad.zip
-unzip glad.zip
-sudo mv glad/include/* /usr/include
-mv glad/src/glad.c ~/workspace/share
-rm -rf glad glad.zip
+# Install Nix & Home Manager
+sh <(curl -L https://nixos.org/nix/install) --daemon
+nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
+nix-channel --update
+nix-shell '<home-manager>' -A install
+rm ~/.profile
 
 # Install Fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Noto.zip
