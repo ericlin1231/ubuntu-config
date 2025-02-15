@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, nixvim, ... }:
 
 {
   home.username = "eric";
@@ -80,6 +80,14 @@
       set belloff=all
       nnoremap <Space>u <C-r>
     '';
+  };
+
+  programs.nixvim = {
+    enable = true;
+    colorschemes.gruvbox.enable = true;
+    plugins = {
+      lualine.enable = true;
+    };
   };
 
   programs.java = {
