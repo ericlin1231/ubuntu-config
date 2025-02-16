@@ -46,8 +46,8 @@
   programs.bash = {
     enable = true;
     shellAliases = {
-      v="vim";
-      l="ls -la";
+      v="nvim";
+      l="ls -al";
     };
     initExtra = ''
       export PATH=$PATH:/opt/riscv/bin
@@ -62,37 +62,54 @@
     enable = true;
   };
 
-  programs.vim = {
+  programs.java = {
     enable = true;
-    defaultEditor = true;
-    plugins = with pkgs.vimPlugins; [
-      vimtex
-      vim-commentary
-    ];
-    settings = {
-      expandtab = true;
-      smartcase = true;
-      ignorecase = true;
-      tabstop = 4;
-      shiftwidth = 4;
-    };
-    extraConfig = ''
-      set belloff=all
-      nnoremap <Space>u <C-r>
-    '';
+    package = pkgs.jdk21;
   };
 
   programs.nixvim = {
     enable = true;
-    colorschemes.gruvbox.enable = true;
+    defaultEditor = true;
+    colorschemes = {
+      tokyonight = {
+        enable = true;
+        settings.style = "night";
+      };
+    };
     plugins = {
       lualine.enable = true;
+      sleuth.enable = true;
+      vimtex.enable = true;
+      todo-comments.settings = {
+          enable = true;
+          signs = true;
+      };
     };
-  };
+    extraPlugins = with pkgs.vimPlugins; [
+        vim-commentary
+    ];
+    globals = {
+        mapleader = " ";
+        maplocalleader = " ";
+    };
+    opts = {
+      mouse = "a";
+      showmode = false;
+      breakindent = true;
+      ignorecase = true;
+      smartcase = true;
+      scrolloff = 5;
 
-  programs.java = {
-    enable = true;
-    package = pkgs.jdk21;
+      hlsearch = true;
+      incsearch = true;
+    };
+    keymaps = [
+        {
+            mode = "n";
+            key = "<Space>u";
+            action = "<C-r>";
+        }
+    ];
   };
 
   programs.home-manager.enable = true;
