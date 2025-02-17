@@ -1,4 +1,4 @@
-{ config, pkgs, nixvim, ... }:
+{ pkgs, nixvim, ... }:
 
 {
   home.username = "eric";
@@ -13,29 +13,9 @@
     cmake
     curl
     wget
-    texliveFull
 
-    (python3.withPackages (pk: with pk; [
-      pip
-      pandas
-      numpy
-    ]))
-    virtualenv
     cargo
     gcc
-    sbt
-    scalafmt
-    glfw
-    sdl3
-
-    yosys
-    circt
-    nextpnr
-    openocd
-    openfpgaloader
-    verilator
-
-    pyenv
   ];
 
   programs.git = {
@@ -51,9 +31,6 @@
       l="ls -al";
     };
     initExtra = ''
-      export PATH=$PATH:/opt/riscv/bin
-      export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/usr/include/
-
       eval "$(starship init bash)"
       cd ~/workspace
     '';
@@ -61,11 +38,6 @@
 
   programs.starship = {
     enable = true;
-  };
-
-  programs.java = {
-    enable = true;
-    package = pkgs.jdk21;
   };
 
   programs.nixvim = {
@@ -82,16 +54,16 @@
       sleuth.enable = true;
       vimtex.enable = true;
       todo-comments.settings = {
-          enable = true;
-          signs = true;
+        enable = true;
+        signs = true;
       };
     };
     extraPlugins = with pkgs.vimPlugins; [
-        vim-commentary
+      vim-commentary
     ];
     globals = {
-        mapleader = " ";
-        maplocalleader = " ";
+      mapleader = " ";
+      maplocalleader = " ";
     };
     opts = {
       mouse = "a";
@@ -105,11 +77,11 @@
       incsearch = true;
     };
     keymaps = [
-        {
-            mode = "n";
-            key = "<Space>u";
-            action = "<C-r>";
-        }
+      {
+        mode = "n";
+        key = "<Space>u";
+        action = "<C-r>";
+      }
     ];
   };
 
