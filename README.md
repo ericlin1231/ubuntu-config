@@ -2,8 +2,7 @@
 
 ## Install Necessary Packages
 
-Run the `setting.sh` which will install the necessary tools by `apt`, need `sudo` permission.  
-while my working folder named `workspace`, you should modify the script so the configuration can work well.  
+Run the `setting.sh` which will install the necessary tools by `apt`, need `sudo` permission. While my working folder named `workspace`, you should modify the script so the configuration can work well.  
 
 ```shell
 $ ./setting.sh
@@ -17,9 +16,7 @@ $ ./relink.sh
 
 ## Configure Environmental Packages
 
-By Nix and home manager we can configure environmental packages as soon as possible.  
-The `#eric` is my configuration name, you can change it in `flake.nix` as you desired.  
-If you run the command at first time, it will consume a few time to install the packages and build the environment. Each time changing the configuration file, should run the below command again to update the environmental packages.
+By Nix and home manager we can configure environmental packages as soon as possible. The `#eric` is my configuration name, you can change it in `flake.nix` as you desired. If you run the command at first time, it will consume a few time to install the packages and build the environment. Each time changing the configuration file, should run the below command again to update the environmental packages.
 
 ```shell
 $ home-manager switch --flake .#eric
