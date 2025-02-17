@@ -14,15 +14,12 @@
     curl
     wget
 
-    cargo
     gcc
+    cargo
+    gleam
   ];
 
-  programs.git = {
-    enable = true;
-    userName = "ericlin1231";
-    userEmail = "eric1231.tw@gmail.com";
-  };
+  programs.starship.enable = true;
 
   programs.bash = {
     enable = true;
@@ -36,8 +33,16 @@
     '';
   };  
 
-  programs.starship = {
+  programs.git = {
     enable = true;
+    userName = "ericlin1231";
+    userEmail = "eric1231.tw@gmail.com";
+  };
+
+  programs.direnv = {
+    enable = true;
+    enableBashIntegration = true;
+    nix-direnv.enable = true;
   };
 
   programs.nixvim = {

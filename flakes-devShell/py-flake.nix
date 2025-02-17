@@ -1,5 +1,5 @@
 {
-  description = "Nix development environment of SoC";
+  description = "Nix development environment of python";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
