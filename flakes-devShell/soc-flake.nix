@@ -21,6 +21,10 @@
     {
       devShells.default = pkgs.mkShell {
         packages = with pkgs; [
+          (python3.withPackages (pk: with pk; [
+            meson
+            ninja
+          ]))
           circt
           nextpnr
           openfpgaloader

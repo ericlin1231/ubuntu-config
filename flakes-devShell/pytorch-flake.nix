@@ -1,5 +1,5 @@
 {
-  description = "Nix development environment of python";
+  description = "Nix development environment of pytorch";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -27,7 +27,6 @@
             pandas
             numpy
           ]))
-          virtualenv
         ];
       };
     }
