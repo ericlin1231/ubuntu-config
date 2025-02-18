@@ -77,6 +77,8 @@
       ignorecase = true;
       smartcase = true;
       scrolloff = 5;
+      tabstop = 4;
+      shiftwidth = 4;
 
       hlsearch = true;
       incsearch = true;
