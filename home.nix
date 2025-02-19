@@ -76,12 +76,12 @@
       breakindent = true;
       ignorecase = true;
       smartcase = true;
+      hlsearch = true;
+      incsearch = true;
+      swapfile = false;
       scrolloff = 5;
       tabstop = 4;
       shiftwidth = 4;
-
-      hlsearch = true;
-      incsearch = true;
     };
     keymaps = [
       {

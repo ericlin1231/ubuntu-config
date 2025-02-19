@@ -10,6 +10,9 @@ mkdir -p ~/workspace/share
 # Keep sudo Permission Valid
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+# Install Chinese Input Method
+sudo apt install ibus-chewing
+
 # Install Nix & Home Manager
 sh <(curl -L https://nixos.org/nix/install) --daemon
 nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
