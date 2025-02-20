@@ -9,10 +9,7 @@
     bat
     glow
     htop
-    gnumake
-    cmake
     curl
-    wget
 
     gcc
     cargo
