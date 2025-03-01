@@ -7,6 +7,7 @@
 
   home.packages = with pkgs; [
     bat
+    tig
     glow
     htop
     curl
@@ -14,6 +15,7 @@
     aspell
     colordiff
 
+    gnumake
     gcc
     cargo
     gleam
