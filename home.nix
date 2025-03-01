@@ -11,6 +11,8 @@
     htop
     curl
     cloc
+    aspell
+    colordiff
 
     gcc
     cargo
@@ -63,6 +65,7 @@
     };
     extraPlugins = with pkgs.vimPlugins; [
       vim-commentary
+      vim-clang-format
     ];
     globals = {
       mapleader = " ";
