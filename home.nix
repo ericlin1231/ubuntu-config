@@ -13,9 +13,12 @@
     curl
     cloc
     aspell
+    aspellDicts.en
     colordiff
 
     gnumake
+    libclang
+    cppcheck
     gcc
     cargo
     gleam
