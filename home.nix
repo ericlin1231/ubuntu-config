@@ -10,6 +10,7 @@
     glow
     htop
     curl
+    cloc
 
     gcc
     cargo
