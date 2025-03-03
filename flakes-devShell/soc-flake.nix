@@ -33,6 +33,7 @@
           sdl3
           trellis
           verilator
+          surfer
           yosys
         ];
         shellHook = ''

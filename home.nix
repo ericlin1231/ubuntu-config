@@ -42,6 +42,9 @@
     enable = true;
     userName = "ericlin1231";
     userEmail = "eric1231.tw@gmail.com";
+    extraConfig = {
+      init.defaultBranch = "master";
+    };
   };
 
   programs.direnv = {
@@ -61,7 +64,6 @@
     };
     plugins = {
       lualine.enable = true;
-      sleuth.enable = true;
       vimtex.enable = true;
       todo-comments.settings = {
         enable = true;
