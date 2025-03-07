@@ -16,6 +16,7 @@
     aspellDicts.en
     colordiff
 
+	gdb
     gnumake
     libclang
     cppcheck
@@ -24,7 +25,13 @@
     gleam
   ];
 
-  programs.starship.enable = true;
+  programs.starship = {
+  	enable = true;
+	settings = {
+	  add_newline = true;
+	  command_timeout = 2000;
+	};
+  };
 
   programs.bash = {
     enable = true;
@@ -33,6 +40,7 @@
       l="ls -al";
     };
     initExtra = ''
+	  export PATH=$PATH:/opt/riscv/bin
       eval "$(starship init bash)"
       cd ~/workspace
     '';
