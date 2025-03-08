@@ -25,6 +25,7 @@
             meson
             ninja
           ]))
+		  xz
           circt
           nextpnr
           openfpgaloader
