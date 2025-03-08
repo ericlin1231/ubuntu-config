@@ -28,6 +28,7 @@
 		  xz
           circt
           nextpnr
+		  openocd
           openfpgaloader
           sbt
           scalafmt

@@ -41,6 +41,7 @@
     };
     initExtra = ''
 	  export PATH=$PATH:/opt/riscv/bin
+	  export F4PGA_INSTALL_DIR=~/opt/f4pga
       eval "$(starship init bash)"
       cd ~/workspace
     '';
