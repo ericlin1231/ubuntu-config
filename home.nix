@@ -21,7 +21,6 @@
         cppcheck
         gcc
         rustup
-        cargo
         gleam
     ];
 
