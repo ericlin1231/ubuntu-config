@@ -20,6 +20,7 @@
         libclang
         cppcheck
         gcc
+        rustup
         cargo
         gleam
     ];
