@@ -12,6 +12,7 @@
         htop
         curl
         cloc
+        gnupg
         aspell
         aspellDicts.en
 
