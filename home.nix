@@ -6,6 +6,7 @@
     home.stateVersion = "24.11";
 
     home.packages = with pkgs; [
+        gh
         bat
         tig
         glow
