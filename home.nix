@@ -65,6 +65,12 @@
         enable = true;
         userName = "tzuchilin";
         userEmail = "eric1231.tw@gmail.com";
+        aliases = {
+            ch = "checkout";
+            ct = "commit";
+            br = "branch";
+            st = "status";
+        };
         extraConfig = {
             init.defaultBranch = "master";
         };
