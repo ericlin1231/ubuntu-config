@@ -20,7 +20,9 @@
         in
         {
             devShells.default = pkgs.mkShell {
-                qemu
+                packages = with pkgs; [
+                    qemu
+                ];
             };
         }
     );
