@@ -70,6 +70,8 @@
             ct = "commit";
             br = "branch";
             st = "status";
+            pmain   = "push origin main";
+            pmaster = "push origin master";
         };
         extraConfig = {
             init.defaultBranch = "master";
