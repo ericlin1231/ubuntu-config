@@ -52,8 +52,9 @@
     programs.bash = {
         enable = true;
         shellAliases = {
-            v="nvim";
-            l="ls -al";
+            v = "nvim";
+            l = "ls -al";
+            c = "clear";
         };
         initExtra = ''
             export PATH=$PATH:/opt/riscv/bin
@@ -67,8 +68,9 @@
         userName = "tzuchilin";
         userEmail = "eric1231.tw@gmail.com";
         aliases = {
+            aa = "add .";
             ch = "checkout";
-            ct = "commit";
+            cm = "commit";
             br = "branch";
             st = "status";
             pmain   = "push origin main";
