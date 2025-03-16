@@ -9,6 +9,7 @@
         gh
         bat
         tig
+        tree
         glow
         htop
         curl
