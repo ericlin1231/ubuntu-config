@@ -22,7 +22,7 @@
         gnumake
         libclang
         cppcheck
-        gcc
+        clang
         rustup
         gleam
     ];
@@ -80,6 +80,7 @@
         };
         extraConfig = {
             init.defaultBranch = "master";
+            commit.gpgsign = true;
         };
     };
 
