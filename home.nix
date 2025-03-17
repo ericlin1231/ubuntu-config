@@ -58,6 +58,7 @@
         };
         initExtra = ''
             export PATH=$PATH:/opt/riscv/bin
+            export PATH=$PATH:~/.cargo/bin
             eval "$(starship init bash)"
             cd ~/workspace
         '';
