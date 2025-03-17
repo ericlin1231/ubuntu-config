@@ -55,6 +55,7 @@
             v = "nvim";
             l = "ls -al";
             c = "clear";
+            hmsw = "home-manager switch --flake .#eric";
         };
         initExtra = ''
             export PATH=$PATH:/opt/riscv/bin
