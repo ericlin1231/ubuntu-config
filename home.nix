@@ -102,6 +102,8 @@
         plugins = {
             lualine.enable = true;
             vimtex.enable = true;
+            web-devicons.enable = true;
+            neo-tree.enable = true;
             todo-comments.settings = {
                 enable = true;
                 signs = true;
@@ -134,6 +136,11 @@
                 mode = "n";
                 key = "<Space>u";
                 action = "<C-r>";
+            }
+            {
+                mode = "n";
+                key = "<leader>e";
+                action = ":Neotree<cr>";
             }
         ];
     };
