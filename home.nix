@@ -22,6 +22,7 @@
         gnumake
         libclang
         cppcheck
+        valgrind
         rustup
         clang
         gleam
