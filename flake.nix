@@ -2,7 +2,7 @@
     description = "Home Manager configuration of eric";
 
     inputs = {
-        nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+        nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
         home-manager.url = "github:nix-community/home-manager";
         flake-utils.url = "github:numtide/flake-utils";
         nixvim.url = "github:nix-community/nixvim";

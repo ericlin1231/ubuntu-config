@@ -3,7 +3,7 @@
 {
     home.username = "eric";
     home.homeDirectory = "/home/eric";
-    home.stateVersion = "24.11";
+    home.stateVersion = "25.05";
 
     home.packages = with pkgs; [
         gh
@@ -14,6 +14,7 @@
         htop
         curl
         cloc
+        typst
         gnupg
         aspell
         aspellDicts.en
@@ -102,7 +103,6 @@
         };
         plugins = {
             lualine.enable = true;
-            vimtex.enable = true;
             web-devicons.enable = true;
             neo-tree.enable = true;
             todo-comments.settings = {
@@ -112,6 +112,7 @@
         };
         extraPlugins = with pkgs.vimPlugins; [
             vim-commentary
+            typst-vim
         ];
         globals = {
             mapleader = " ";
@@ -128,10 +129,6 @@
             scrolloff = 5;
             textwidth = 80;
         };
-        extraConfigVim = ''
-            highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-            match OverLength /\%81v.\+/
-        '';
         keymaps = [
             {
                 mode = "n";
