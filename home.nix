@@ -7,17 +7,12 @@
 
     home.packages = with pkgs; [
         gh
-        bat
-        tig
+        uv
         tree
-        glow
-        htop
         curl
         cloc
         typst
         gnupg
-        aspell
-        aspellDicts.en
 
         gdb
         gnumake
