@@ -55,8 +55,7 @@
             hmsw = "home-manager switch --flake .#eric";
         };
         initExtra = ''
-            export PATH=$PATH:/opt/riscv/bin
-            export PATH=$PATH:~/.cargo/bin
+            export PATH="/home/eric/.local/bin:$PATH"
             eval "$(starship init bash)"
             cd ~/workspace
         '';
